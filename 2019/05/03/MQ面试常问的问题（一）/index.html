@@ -13,7 +13,7 @@ if (isPassword) {
     error: '复制错误',
     noSupport: '浏览器不支持'
   }
-}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#面试题"><span class="toc-number">1.</span> <span class="toc-text">面试题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面试官心理分析"><span class="toc-number">2.</span> <span class="toc-text">面试官心理分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#其实面试官主要是想看看："><span class="toc-number">2.0.1.</span> <span class="toc-text">其实面试官主要是想看看：</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#面试题剖析"><span class="toc-number">3.</span> <span class="toc-text">面试题剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么使用消息队列"><span class="toc-number">3.1.</span> <span class="toc-text">为什么使用消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#解耦"><span class="toc-number">3.1.0.1.</span> <span class="toc-text">解耦</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#异步"><span class="toc-number">3.1.0.2.</span> <span class="toc-text">异步</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#削峰"><span class="toc-number">3.1.0.3.</span> <span class="toc-text">削峰</span></a></li></ol></li></ol></li></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/head.png"></div><div class="author-info-name">无言独上青楼</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/machudong" target="_blank">GitHub<i class="icon-dot bg-color2"></i></a><a class="links-button button-hover" href="https://weibo.com/5961187827/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">微博<i class="icon-dot bg-color3"></i></a><a class="links-button button-hover" href="mailto:648709040@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color1"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">4</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/about">关于我</a></nav><div class="right-info"><a class="search social-icon"><i class="fas fa-search"></i><span> 搜索</span></a><a class="title-name" href="/">无言独上青楼</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">MQ面试常问的问题（一）</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2019-05-03 | 更新于 2019-05-03</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"></div><div class="button-hover tags"></div></div></div><div class="main-content"><h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><ul>
+}</script></head><body><canvas id="universe"></canvas><!--#body--><div id="sidebar"><div class="toggle-sidebar-info button-hover"><span data-toggle="文章目录">站点概览</span></div><div class="sidebar-toc"><div class="sidebar-toc-title">目录</div><div class="sidebar-toc-progress"><span class="progress-notice">您已阅读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc-progress-bar"></div></div><div class="sidebar-toc-content" id="sidebar-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#面试题"><span class="toc-number">1.</span> <span class="toc-text">面试题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面试官心理分析"><span class="toc-number">2.</span> <span class="toc-text">面试官心理分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#其实面试官主要是想看看："><span class="toc-number">2.0.1.</span> <span class="toc-text">其实面试官主要是想看看：</span></a></li></ol></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#面试题剖析"><span class="toc-number">3.</span> <span class="toc-text">面试题剖析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么使用消息队列"><span class="toc-number">3.1.</span> <span class="toc-text">为什么使用消息队列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#解耦"><span class="toc-number">3.1.1.</span> <span class="toc-text">解耦</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#异步"><span class="toc-number">3.1.2.</span> <span class="toc-text">异步</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#削峰"><span class="toc-number">3.1.3.</span> <span class="toc-text">削峰</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#消息队列有什么优缺点"><span class="toc-number">3.2.</span> <span class="toc-text">消息队列有什么优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Kafka、ActiveMQ、RabbitMQ、RocketMQ-有什么优缺点？"><span class="toc-number">3.3.</span> <span class="toc-text">Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.4.</span> <span class="toc-text">总结</span></a></li></ol></li></div></div><div class="author-info hide"><div class="author-info-avatar"><img class="author-info-avatar-img" src="/head.png"></div><div class="author-info-name">无言独上青楼</div><div class="author-info-description"></div><div class="links-buttons"><a class="links-button button-hover" href="https://github.com/machudong" target="_blank">GitHub<i class="icon-dot bg-color10"></i></a><a class="links-button button-hover" href="https://weibo.com/5961187827/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">微博<i class="icon-dot bg-color1"></i></a><a class="links-button button-hover" href="mailto:648709040@qq.com" target="_blank">E-Mail<i class="icon-dot bg-color7"></i></a></div><div class="author-info-articles"><a class="author-info-articles-archives article-meta" href="/archives"><span class="pull-top">日志</span><span class="pull-bottom">4</span></a></div></div></div><div id="main-container"><header><div id="menu-outer"><i class="menu-list-icon fas fa-bars"></i><nav id="menu-inner"><a class="menu-item" href="/">首页</a><a class="menu-item" href="/about">关于我</a></nav><div class="right-info"><a class="search social-icon"><i class="fas fa-search"></i><span> 搜索</span></a><a class="title-name" href="/">无言独上青楼</a><span id="now-time"></span></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><div class="post-header"><div class="title">MQ面试常问的问题（一）</div><div class="container"><time class="button-hover post-date"><i class="fas fa-calendar-alt article-icon" aria-hidden="true"></i> 发表于 2019-05-03 | 更新于 2019-05-03</time><!--time.button-hover.post-date #[i.fas.fa-calendar-alt.article-icon(aria-hidden="true")] #[=__('post.modified')] #[=date(page['updated'], config.date_format)]--><div class="button-hover categories"></div><div class="button-hover tags"></div></div></div><div class="main-content"><h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><ul>
 <li>什么场景使用了MQ？直接调接口不行吗？</li>
 <li>用消息队列都有什么优点和缺点？</li>
 <li>Kafka、ActiveMQ、RabbitMQ、RocketMQ 都有什么区别？</li>
@@ -26,7 +26,81 @@ if (isPassword) {
 </li>
 <li><p>第三，既然你用了 MQ，可能是某一种 MQ，那么你当时做没做过调研？<br>你别傻乎乎的自己拍脑袋看个人喜好就瞎用了一个 MQ，比如 Kafka，甚至都从没调研过业界流行的 MQ 到底有哪几种。每一个 MQ 的优点和缺点是什么。每一个 MQ 没有绝对的好坏，但是就是看用在哪个场景可以扬长避短，利用其优势，规避其劣势。<br>如果是一个不考虑技术选型的候选人招进了团队，leader 交给他一个任务，去设计个什么系统，他在里面用一些技术，可能都没考虑过选型，最后选的技术可能并不一定合适，一样是留坑。</p>
 <h3 id="面试题剖析"><a href="#面试题剖析" class="headerlink" title="面试题剖析"></a>面试题剖析</h3><h4 id="为什么使用消息队列"><a href="#为什么使用消息队列" class="headerlink" title="为什么使用消息队列"></a>为什么使用消息队列</h4><p> 其实就是问问你消息队列都有哪些使用场景，然后你项目里具体是什么场景，说说你在这个场景里用消息队列是什么？<br> 面试官问你这个问题，期望的一个回答是说，你们公司有个什么业务场景，这个业务场景有个什么技术挑战，如果不用 MQ 可能会很麻烦，但是你现在用了 MQ 之后带给了你很多的好处。<br> 先说一下消息队列常见的使用场景吧，其实场景有很多，但是比较核心的有 3 个：解耦、异步、削峰。</p>
-<h6 id="解耦"><a href="#解耦" class="headerlink" title="解耦"></a>解耦</h6><p> 看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃……<br> <img src="/2019/05/03/MQ面试常问的问题（一）/mq-1.png" alt></p>
-<h6 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h6><h6 id="削峰"><a href="#削峰" class="headerlink" title="削峰"></a>削峰</h6></li>
+<h5 id="解耦"><a href="#解耦" class="headerlink" title="解耦"></a>解耦</h5><p> 看这么个场景。A 系统发送数据到 BCD 三个系统，通过接口调用发送。如果 E 系统也要这个数据呢？那如果 C 系统现在不需要了呢？A 系统负责人几乎崩溃……<br> <img src="/2019/05/03/MQ面试常问的问题（一）/mq-1.png" alt><br> 在这个场景中，A 系统跟其它各种乱七八糟的系统严重耦合，A 系统产生一条比较关键的数据，很多系统都需要 A 系统将这个数据发送过来。A 系统要时时刻刻考虑 BCDE 四个系统如果挂了该咋办？要不要重发，要不要把消息存起来？头发都白了啊！<br>如果使用 MQ，A 系统产生一条数据，发送到 MQ 里面去，哪个系统需要数据自己去 MQ 里面消费。如果新系统需要数据，直接从 MQ 里消费即可；如果某个系统不需要这条数据了，就取消对 MQ 消息的消费即可。这样下来，A 系统压根儿不需要去考虑要给谁发送数据，不需要维护这个代码，也不需要考虑人家是否调用成功、失败超时等情况。<br><img src="/2019/05/03/MQ面试常问的问题（一）/mq-2.png" alt><br>总结：通过一个 MQ，Pub/Sub 发布订阅消息这么一个模型，A 系统就跟其它系统彻底解耦了。<br>面试技巧：你需要去考虑一下你负责的系统中是否有类似的场景，就是一个系统或者一个模块，调用了多个系统或者模块，互相之间的调用很复杂，维护起来很麻烦。但是其实这个调用是不需要直接同步调用接口的，如果用 MQ 给它异步化解耦，也是可以的，你就需要去考虑在你的项目里，是不是可以运用这个 MQ 去进行系统的解耦。在简历中体现出来这块东西，用 MQ 作解耦。</p>
+<h5 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h5><p>再来看一个场景，A 系统接收一个请求，需要在自己本地写库，还需要在 BCD 三个系统写库，自己本地写库要 3ms，BCD 三个系统分别写库要 300ms、450ms、200ms。最终请求总延时是 3 + 300 + 450 + 200 = 953ms，接近 1s，用户感觉搞个什么东西，慢死了慢死了。用户通过浏览器发起请求，等待个 1s，这几乎是不可接受的。<br><img src="/2019/05/03/MQ面试常问的问题（一）/mq-3.png" alt><br>一般互联网类的企业，对于用户直接的操作，一般要求是每个请求都必须在 200 ms 以内完成，对用户几乎是无感知的。<br>如果使用 MQ，那么A系统连续发送3条消息到 MQ 队列中，假如耗时 5ms，A 系统从接受一个请求到返回响应给用户，总时长是 3 + 5 = 8ms，对于用户而言，其实感觉上就是点个按钮，8ms 以后就直接返回了，爽！网站做得真好，真快！<br><img src="/2019/05/03/MQ面试常问的问题（一）/mq-4.png" alt></p>
+<h5 id="削峰"><a href="#削峰" class="headerlink" title="削峰"></a>削峰</h5><p>每天 0:00 到 12:00，A 系统风平浪静，每秒并发请求数量就 50 个。结果每次一到12:00 ~ 13:00，每秒并发请求数量突然会暴增到 5k+ 条。但是系统是直接基于MySQL的，大量的请求涌入 MySQL，每秒钟对MySQL执行约 5k 条 SQL。<br>一般的 MySQL，扛到每秒2k个请求就差不多了，如果每秒请求到 5k 的话，可能就直接把 MySQL 给打死了，导致系统崩溃，用户也就没法再使用系统了。<br>但是高峰期一过，到了下午的时候，就成了低峰期，可能也就 1w 的用户同时在网站上操作，每秒中的请求数量可能也就 50 个请求，对整个系统几乎没有任何的压力。<br><img src="/2019/05/03/MQ面试常问的问题（一）/mq-5.png" alt><br>如果使用MQ，每秒5k个请求写入MQ，A系统每秒钟最多处理 2k个请求，因为MySQL每秒钟最多处理2k个。A系统从MQ中慢慢拉取请求，每秒钟就拉取 2k个请求，不要超过自己每秒能处理的最大请求数量就 ok，这样下来，哪怕是高峰期的时候，A系统也绝对不会挂掉。而 MQ 每秒钟5k个请求进来，就2k个请求出去，结果就导致在中午高峰期（1 个小时，可能有几十万甚至几百万的请求积压在 MQ 中。<br><img src="/2019/05/03/MQ面试常问的问题（一）/mq-6.png" alt><br>这个短暂的高峰期积压是ok的，因为高峰期过了之后，每秒钟就 50 个请求进 MQ，但是 A 系统依然会按照每秒 2k 个请求的速度在处理。所以说，只要高峰期一过，A系统就会快速将积压的消息给解决掉。</p>
+<h4 id="消息队列有什么优缺点"><a href="#消息队列有什么优缺点" class="headerlink" title="消息队列有什么优缺点"></a>消息队列有什么优缺点</h4><p>优点上面已经说了，就是在特殊场景下有其对应的好处，解耦、异步、削峰。</p>
+</li>
 </ul>
+<p>缺点有以下几个：</p>
+<ul>
+<li><p>系统可用性降低<br>系统引入的外部依赖越多，越容易挂掉。本来你就是 A 系统调用 BCD 三个系统的接口就好了，人 ABCD 四个系统好好的，没啥问题，你偏加个 MQ 进来，万一 MQ 挂了咋整，MQ 一挂，整套系统崩溃的，你不就完了？如何保证消息队列的高可用，可以点击这里查看。</p>
+</li>
+<li><p>系统复杂度提高<br>硬生生加个 MQ 进来，你怎么保证消息没有重复消费？怎么处理消息丢失的情况？怎么保证消息传递的顺序性？头大头大，问题一大堆，痛苦不已。</p>
+</li>
+<li><p>一致性问题<br>A 系统处理完了直接返回成功了，人都以为你这个请求就成功了；但是问题是，要是 BCD 三个系统那里，BD 两个系统写库成功了，结果 C 系统写库失败了，咋整？你这数据就不一致了。</p>
+</li>
+</ul>
+<p>所以消息队列实际是一种非常复杂的架构，你引入它有很多好处，但是也得针对它带来的坏处做各种额外的技术方案和架构来规避掉，做好之后，你会发现，妈呀，系统复杂度提升了一个数量级，也许是复杂了 10 倍。但是关键时刻，用，还是得用的。</p>
+<h4 id="Kafka、ActiveMQ、RabbitMQ、RocketMQ-有什么优缺点？"><a href="#Kafka、ActiveMQ、RabbitMQ、RocketMQ-有什么优缺点？" class="headerlink" title="Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？"></a>Kafka、ActiveMQ、RabbitMQ、RocketMQ 有什么优缺点？</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>ActiveMQ</th>
+<th>RabbitMQ</th>
+<th>RocketMQ</th>
+<th>Kafka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单机吞吐量</td>
+<td>万级，比RocketMQ、Kafka低一个数量级</td>
+<td>同ActiveMQ</td>
+<td>10万级，支撑高吞吐</td>
+<td>10 万级，高吞吐，一般配合大数据类的系统来进行实时数据计算、日志采集等场景</td>
+</tr>
+<tr>
+<td>topic 数量对吞吐量的影响</td>
+<td></td>
+<td></td>
+<td>topic 可以达到几百/几千的级别，吞吐量会有较小幅度的下降，这是RocketMQ的一大优势，在同等机器下，可以支撑大量的topic</td>
+<td>topic 从几十到几百个时候，吞吐量会大幅度下降，在同等机器下，Kafka尽量保证topic数量不要过多，如果要支撑大规模的topic，需要增加更多的机器资源</td>
+</tr>
+<tr>
+<td>时效性</td>
+<td>ms 级</td>
+<td>微秒级，这是RabbitMQ的一大特点，延迟最低</td>
+<td>ms 级</td>
+<td>延迟在 ms 级以内</td>
+</tr>
+<tr>
+<td>可用性</td>
+<td>高，基于主从架构实现高可用</td>
+<td>同 ActiveMQ</td>
+<td>非常高，分布式架构</td>
+<td>非常高，分布式，一个数据多个副本，少数机器宕机，不会丢失数据，不会导致不可用</td>
+</tr>
+<tr>
+<td>消息可靠性</td>
+<td>有较低的概率丢失数据</td>
+<td>基本不丢</td>
+<td>经过参数优化配置，可以做到0丢失</td>
+<td>同RocketMQ</td>
+</tr>
+<tr>
+<td>功能支持</td>
+<td>MQ领域的功能极其完备</td>
+<td>基于erlang开发，并发能力很强，性能极好，延时很低</td>
+<td>MQ功能较为完善，还是分布式的，扩展性好</td>
+<td>功能较为简单，主要支持简单的MQ功能，在大数据领域的实时计算以及日志采集被大规模使用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>综上，各种对比之后，有如下建议：</p>
+<p>一般的业务系统要引入 MQ，最早大家都用 ActiveMQ，但是现在确实大家用的不多了，没经过大规模吞吐量场景的验证，社区也不是很活跃，所以大家还是算了吧，我个人不推荐用这个了；</p>
+<p>后来大家开始用 RabbitMQ，但是确实 erlang 语言阻止了大量的 Java 工程师去深入研究和掌控它，对公司而言，几乎处于不可控的状态，但是确实人家是开源的，比较稳定的支持，活跃度也高；</p>
+<p>不过现在确实越来越多的公司会去用 RocketMQ，确实很不错，毕竟是阿里出品，但社区可能有突然黄掉的风险（目前 RocketMQ 已捐给 Apache，但 GitHub 上的活跃度其实不算高）对自己公司技术实力有绝对自信的，推荐用 RocketMQ，否则回去老老实实用 RabbitMQ 吧，人家有活跃的开源社区，绝对不会黄。</p>
+<p>所以中小型公司，技术实力较为一般，技术挑战不是特别高，用 RabbitMQ 是不错的选择；大型公司，基础架构研发实力较强，用 RocketMQ 是很好的选择。</p>
+<p>如果是大数据领域的实时计算、日志采集等场景，用 Kafka 是业内标准的，绝对没问题，社区活跃度很高，绝对不会黄，何况几乎是全世界这个领域的事实性规范。</p>
 </div><div class="post-copyright"><div class="post-copyright-author"><span class="post-copyright-meta">本文作者: </span><span class="post-copyright-info"><a href="mailto:undefined">无言独上青楼</a></span></div><div class="post-copyright-type"><span class="post-copyright-meta">本文链接: </span><span class="post-copyright-info"><a href="http://machudong.github.io/2019/05/03/MQ面试常问的问题（一）/">http://machudong.github.io/2019/05/03/MQ面试常问的问题（一）/</a></span></div><div class="post-copyright-notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://machudong.github.io">无言独上青楼</a>！</span></div></div></article><div id="pagination"><div class="next-post pull-right"><span class="line line-top"></span><span class="line line-right"></span><span class="line line-bottom"></span><span class="line line-left"></span><a href="/2019/05/03/我的第二篇博客文章/"><span>我的第二篇博客文章</span><span>&nbsp;</span><i class="fas fa-angle-right"></i></a></div></div><!--div!= paginator()--></div></div><div class="button-hover" id="return-top"><i class="fas fa-arrow-up" aria-hidden="true"></i></div><footer><div id="footer"><div class="button-hover" id="side-button"><i class="fas fa-arrow-right"></i></div><div class="right-content"><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fas fa-file-o"></i></span><span id="busuanzi_value_page_pv"></span><span></span></div><div class="copyright">&copy;2017 ～ 2019 By 无言独上青楼</div></div></div></footer></div><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery-3.3.1.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/velocity.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/thirdparty/jquery.mCustomScrollbar.concat.min.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/fan.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/canvas_bg.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/utils.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/scroll.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/sidebar.js"></script><!--script(src=url)--><!--js(src=url_for(url) + '?version=' + version())--><script src="/js/copy.js"></script><!--script(src=url)--><div class="search-dialog"><div id="algolia-search-title">Algolia</div><div class="search-close-button"><i class="fa fa-times"></i></div><!--div#current-refined-values--><!--div#clear-all--><div id="search-box"></div><!--div#refinement-list--><hr><div id="hits"></div><div id="algolia-pagination"></div></div><div class="search-mask"></div><script src="/js/search/algolia.js"></script></body></html>
